@@ -20,4 +20,5 @@ def test_parse_file_invalid_extension():
     parser = uabcs_parser()
 
     with pytest.raises(ValueError):
-        parser.parse_file("student_grades.uabcs")
+        parser.parse_file("student_grades.cs")
+
