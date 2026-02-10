@@ -1,0 +1,14 @@
+# Student grades database
+
+NAME|SUBJECT|GRADE|PASS|POINTS
+
+Alice|Math|85|True|425
+Bob|Science|78|True|390
+Charlie|English|92|True|460
+Diana|Math|67|False|335
+Eve|Science|88|True|440
+Frank|English|76|True|380
+Grace|Math|95|True|475
+Henry|Science|82|True|410
+Ivy|English|69|False|345
+Jack|Math|87|True|435
