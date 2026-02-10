@@ -2,7 +2,7 @@
 import pytest
 
 # Same import as setup_example.py
-from byte_code.python_311.uabcs_parser import uabcs_parser
+from byte_code.python_312.uabcs_parser import uabcs_parser
 
 
 def test_parse_file_valid_student_grades():
