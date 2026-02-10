@@ -22,7 +22,7 @@ This will parse student_grades.uabcs and print the resulting records.
 
 ### Running Unit Tests
 
-All unit tests are written using pytest and are located in test_uabcs_parser.py.
+All unit tests are written using pytest and are located in test_parser.py.
 
 To run the tests:
 ```bash
