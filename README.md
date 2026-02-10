@@ -3,12 +3,16 @@
 ## Environment Setup (Recommended: GitHub Codespaces)
 
 1. Open this repository in **GitHub Codespaces**
-2. Open a terminal and verify Python version:
+2. Open a terminal and verify Python version (make sure version is 3.8 - 3.13):
    ```bash
    python --version
    ```
-
-3. cd lab03
+3. Change this to the version you have:
+```bash
+from byte_code.python_311.uabcs_parser import uabcs_parser
+from byte_code.python_312.uabcs_parser import uabcs_parser
+```
+5. cd lab03
    
 ## Running the Example Script
 
