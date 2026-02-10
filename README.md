@@ -7,7 +7,7 @@
    ```bash
    python --version
    ```
-3. Change this to the version you have:
+3. Change this to the version you have in both setup_example.py and test_parser.py:
 ```bash
 from byte_code.python_311.uabcs_parser import uabcs_parser
 from byte_code.python_312.uabcs_parser import uabcs_parser
