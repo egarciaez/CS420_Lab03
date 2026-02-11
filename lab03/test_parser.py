@@ -6,10 +6,7 @@ from byte_code.python_312.uabcs_parser import uabcs_parser
 
 def testValidFile():
     """
-    Tests that a valid .uabcs file:
-    - Returns a list
-    - Contains 10 records
-    - Correctly parses and converts data types
+    Tests that a valid .uabcs file
     """
     try:
         parser = uabcs_parser()
@@ -60,6 +57,7 @@ if __name__ == "__main__":
     print("Passed:", passed.count(True))
     print("Failed:", passed.count(False))
     print("")
+
 
 
 
