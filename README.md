@@ -26,14 +26,15 @@ This will parse student_grades.uabcs and print the resulting records.
 
 ### Running Unit Tests
 
-All unit tests are written using pytest and are located in test_parser.py.
+All unit tests are located in test_parser.py.
 
 To run the tests:
 ```bash
-pytest
+python test_parser.py
 ```
 
 Expected output: 
-<img width="946" height="134" alt="image" src="https://github.com/user-attachments/assets/261c6911-3f61-404b-8ab6-e0bc6a8b6169" />
+<img width="307" height="87" alt="image" src="https://github.com/user-attachments/assets/d96f9ef2-c065-4344-af9c-3c756bb19c86" />
+
 
 
