@@ -91,9 +91,7 @@ get_records_by_field() function tests
 ########## Execution ##########
 
 if __name__ == "__main__":
-    passed = [
-        testValidFile(), testInvalidFileExtension()
-    ]
+    passed = [testValidFile(), testInvalidFileExtension()]
 
     print("\nTesting parse_file():")
     print("----------------------")
@@ -112,4 +110,5 @@ if __name__ == "__main__":
     print("Passed " + str(passed.count(True)) + " tests")
     print("Failed " + str(passed.count(False)) + " tests")
     print("")
+
 
