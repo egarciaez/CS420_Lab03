@@ -35,7 +35,6 @@ python test_parser.py
 
 Expected output: 
 
-<img width="307" height="87" alt="image" src="https://github.com/user-attachments/assets/d96f9ef2-c065-4344-af9c-3c756bb19c86" />
-
+<img width="533" height="208" alt="image" src="https://github.com/user-attachments/assets/d20fcb8b-6474-4841-ac35-1625e38b704d" />
 
 
