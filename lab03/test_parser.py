@@ -6,7 +6,9 @@ from byte_code.python_312.uabcs_parser import uabcs_parser
 
 def testValidFile():
     """
-    Tests that a valid .uabcs file
+    Tests that it is a valid .uabcs file 
+    for parse_file(self, filename) function
+
     """
     try:
         parser = uabcs_parser()
@@ -28,7 +30,8 @@ def testValidFile():
 
 def testInvalidFileExtension():
     """
-    Tests that an invalid file extension raises ValueError.
+    Tests that an invalid file extension raises ValueError 
+    for parse_file(self, filename) function
     """
     try:
         parser = uabcs_parser()
@@ -45,6 +48,46 @@ def testInvalidFileExtension():
         return False
 
 
+"""
+get_column_names function tests
+"""
+def test_column_names_correct():
+    
+    try:
+        parser = uabcs_parser()
+        parser.parse_file("student_grades.uabcs")
+
+        expected = ["NAME", "SUBJECT", "GRADE", "PASS", "POINTS"]
+        result = parser.get_column_names()
+
+        assert result == expected
+        return True
+    except Exception:
+        return False
+
+
+
+def test_column_names_independent():
+  
+    try:
+        parser = uabcs_parser()
+        parser.parse_file("student_grades.uabcs")
+
+        cols = parser.get_column_names()
+        cols.append("NEW_COLUMN")
+
+        new_cols = parser.get_column_names()
+
+        assert "NEW_COLUMN" not in new_cols
+        return True
+    except Exception:
+        return False
+
+"""
+get_records_by_field() function tests
+"""
+
+
 ########## Execution ##########
 
 if __name__ == "__main__":
@@ -59,5 +102,14 @@ if __name__ == "__main__":
     print("")
 
 
+    passed = [
+        test_column_names_correct(),
+        test_column_names_independent()
+    ]
 
+    print("\nTesting get_column_names()")
+    print("------------------------------")
+    print("Passed " + str(passed.count(True)) + " tests")
+    print("Failed " + str(passed.count(False)) + " tests")
+    print("")
 
