@@ -148,11 +148,12 @@ if __name__ == "__main__":
         test_grade_filter(),
     ]
 
-    print(f"\nTesting get_records_by_field")
+    print(f"\nTesting get_records_by_field(field_name, value)")
     print(f"--------------")
     print(f"Passed " + str(passed.count(True)) + " tests")
     print(f"Failed " + str(passed.count(False)) + " tests")
     print("")
+
 
 
 
