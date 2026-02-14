@@ -87,6 +87,38 @@ def test_column_names_independent():
 get_records_by_field() function tests
 """
 
+def test_correct_matches():
+    try:
+        parser = uabcs_parser()
+        parser.parse_file("student_grades.uabcs")
+        result = parser.get_records_by_field("SUBJECT", "Math")
+
+        expected = [
+            {"NAME": "Alice", "SUBJECT": "Math", "GRADE": 85, "PASS": True, "POINTS": 425},
+            {"NAME": "Diana", "SUBJECT": "Math", "GRADE": 67, "PASS": False, "POINTS": 335},
+            {"NAME": "Grace", "SUBJECT": "Math", "GRADE": 95, "PASS": True, "POINTS": 475},
+            {"NAME": "Jack", "SUBJECT": "Math", "GRADE": 87, "PASS": True, "POINTS": 435}
+        ]
+    
+        assert result == expected
+        return True
+    except Exception:
+        return False
+    
+def test_grade_filter():
+    try:
+        parser = uabcs_parser()
+        parser.parse_file("student_grades.uabcs")
+        result = parser.get_records_by_field("GRADE", 92)
+
+        expected = [
+            {"NAME": "Charlie", "SUBJECT": "English", "GRADE": 92, "PASS": True, "POINTS": 460}
+        ]
+
+        assert result == expected
+        return True
+    except Exception:
+        return False
 
 ########## Execution ##########
 
@@ -111,6 +143,16 @@ if __name__ == "__main__":
     print("Failed " + str(passed.count(False)) + " tests")
     print("")
 
+    passed = [
+        test_correct_matches(),
+        test_grade_filter(),
+    ]
+
+    print(f"\nTesting")
+    print(f"--------------")
+    print(f"Passed " + str(passed.count(True)) + " tests")
+    print(f"Failed " + str(passed.count(False)) + " tests")
+    print("")
 
 #### Tests for get_column_names ####
 
@@ -162,4 +204,5 @@ if __name__ == "__main__":
     print("Passed " + str(passed.count(True)) + " tests")
     print("Failed " + str(passed.count(False)) + " tests")
     print("")
+
 
